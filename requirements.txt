@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+statsmodels
+matplotlib
+seaborn
+fastcluster
+statannotations
+scikit-learn
+openpyxl
+rdkit
+jupyterlab
