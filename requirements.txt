@@ -1,12 +1,16 @@
 numpy
 pandas
+polars-lts-cpu
 scipy
 statsmodels
 matplotlib
 seaborn
 fastcluster
 statannotations
+requests
 scikit-learn
 openpyxl
 rdkit
+biopython
 jupyterlab
+jupyter_ai
