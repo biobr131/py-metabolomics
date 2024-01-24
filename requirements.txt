@@ -13,4 +13,6 @@ openpyxl
 rdkit
 biopython
 jupyterlab
+anndata
+scanpy
 jupyter_ai
