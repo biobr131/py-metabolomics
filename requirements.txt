@@ -16,10 +16,12 @@ openpyxl
 xlrd
 rdkit
 biopython
+bioinfokit
 anndata
 scanpy
 pyopenms
 jupyterlab
 ipywidgets
+ipympl
 streamlit
 pygwalker
