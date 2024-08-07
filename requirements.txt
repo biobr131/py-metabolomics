@@ -5,7 +5,7 @@ numba==0.58.1
 polars-lts-cpu
 scipy
 statsmodels
-matplotlib
+matplotlib<3.9
 japanize-matplotlib
 seaborn
 fastcluster
