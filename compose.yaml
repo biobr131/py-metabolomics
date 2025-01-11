@@ -21,3 +21,6 @@ services:
      - ./scripts:/work/scripts
     tty: true
     stdin_open: true
+
+  volumes:
+    postgres_data:
