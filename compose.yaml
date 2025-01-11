@@ -11,7 +11,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
   jupyter:
-    build: .
+    build: 
+      context: .
+      args:
+        DIR_WORK: "/work"
+        REQ_TXT: "requirements.txt"
     image: biobr131/py-metabolomics:latest
     container_name: jupyter
     command: jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
