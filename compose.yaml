@@ -2,7 +2,6 @@ version: '3'
 
 services:
   jupyter:
-    platform: linux/x86_64
     build: .
     image: biobr131/py-metabolomics:latest
     container_name: jupyter
@@ -10,6 +9,6 @@ services:
     ports:
      - "8888:8888"
     volumes:
-     - ./code:/work/code
+     - ./scripts:/work/scripts
     tty: true
     stdin_open: true
