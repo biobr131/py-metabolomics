@@ -5,17 +5,18 @@ from sqlalchemy import create_engine, engine, URL
 from sqlalchemy.orm import sessionmaker
 
 BASE_DIR = Path(__file__).resolve().parent
+DOTENV_DIR = BASE_DIR / "db"
 
 
 def get_engine(
-        dotenv_file: str = f"{BASE_DIR}/db/.env"
+        dotenv_file: str = f"{DOTENV_DIR}/.env"
     ) -> engine.Engine:
     """
     データベース接続のためのEngineを作成する。
 
     Parameters
     ----------
-    dotenv_file : str, default f"{BASE_DIR}/db/.env"
+    dotenv_file : str, default f"{BASE_DIR}/.env"
         .envファイルのパスおよびファイル名
     
     Returns
@@ -39,14 +40,14 @@ def get_engine(
 
 
 def get_session(
-        dotenv_file: str = f"{BASE_DIR}/db/.env"
+        dotenv_file: str = f"{DOTENV_DIR}/.env"
     ) -> sessionmaker:
     """
     データベース接続のためのSessionを作成する。
 
     Parameters
     ----------
-    dotenv_file : str, default f"{BASE_DIR}/db/.env"
+    dotenv_file : str, default f"{BASE_DIR}/.env"
         .envファイルのパスおよびファイル名
     
     Returns
