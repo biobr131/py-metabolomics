@@ -27,7 +27,7 @@ def get_engine(
     config = dotenv_values(dotenv_file)
 
     url_object = URL.create(
-        "postgresql+psycopg",
+        "postgresql+psycopg2",
         username=config["POSTGRES_USER"],
         password=config["POSTGRES_PASSWORD"],  # plain (unescaped) text
         host=config.get("POSTGRES_HOST", "postgres"),
