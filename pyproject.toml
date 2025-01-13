@@ -1,0 +1,38 @@
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    skipdist = True
+    env_list = 
+        black
+        ruff
+        mypy
+
+    [black]
+    deps = black
+    commands = black .
+
+    [ruff]
+    deps = ruff
+    commands = ruff check .
+
+    [mypy]
+    deps = mypy
+    commands = mypy .
+"""
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+pythonpath = ['src', 'tests']
+norecursedirs = '.venv'
+
+[tool.ruff]
+lint.ignore = ['E501']
+lint.select = [
+    'C9',  # mccabe
+    'E',  # pycodestyle Error
+    'F',  # PyFlakes
+    'W',  # pycodestyle Warning
+]
+line-length = 120
+src = ['.']
