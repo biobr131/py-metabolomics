@@ -1,21 +1,24 @@
 services:
   postgres:
-    platform: linux/x86_64
     image: postgres:17
     container_name: postgres
     environment:
       - TZ=Asia/Tokyo
     env_file:
-      - ./scripts/db/.env
+      - ./scripts/src/db/.env
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
   jupyter:
+    platform: linux/x86_64
     build: 
       context: .
       args:
-        DIR_WORK: "/work"
+        DIR_WORK: "/usr/src/app"
+        ENV_YML: "environment.yaml"
+        VENV: "bioinfo"
+        DIR_CONDA: "/opt/conda"
         REQ_TXT: "requirements.txt"
     image: biobr131/py-metabolomics:latest
     container_name: jupyter
@@ -23,7 +26,7 @@ services:
     ports:
      - "8888:8888"
     volumes:
-     - ./scripts:/work/scripts
+     - ./scripts:/usr/src/app
     tty: true
     stdin_open: true
 
