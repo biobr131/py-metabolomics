@@ -8,7 +8,7 @@ structlog
 pytest-structlog
 line_profiler
 memory_profiler
-pandas[performance, plot, computation, excel, xml, postgresql, hdf5]
+pandas[performance, plot, computation, excel, xml, hdf5]
 polars-lts-cpu
 ibis-framework[pandas, polars]
 statsmodels
@@ -17,6 +17,8 @@ seaborn
 fastcluster
 statannotations
 python-dotenv
+psycopg[binary]
+sqlalchemy
 scikit-learn
 rdkit
 biopython
