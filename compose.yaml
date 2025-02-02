@@ -1,5 +1,6 @@
 services:
   postgres:
+    platform: linux/x86_64
     image: postgres:17
     container_name: postgres
     environment:
@@ -26,7 +27,7 @@ services:
     ports:
      - "8888:8888"
     volumes:
-     - ./scripts:/usr/src/app
+     - .:/usr/src/app
     tty: true
     stdin_open: true
 
