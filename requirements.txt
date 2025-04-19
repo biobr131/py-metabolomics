@@ -23,6 +23,7 @@ scikit-learn
 rdkit
 biopython
 bioinfokit
+bioservices
 scanpy
 jupyterlab
 ipywidgets
